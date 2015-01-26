@@ -1,0 +1,199 @@
+body {
+	padding:0;
+	margin:0;
+	background-color: lightgreen;
+	font:Tahoma;
+	font-size: 20px;
+}
+
+.logoHomePage {
+	position: absolute;
+	width: 25%;
+	top:1%;
+	left:3%;
+	box-shadow: 20px 20px 10px black;
+}
+
+header {
+	width:100%;
+	height:100px;
+	background-color: green;
+}
+
+.navbar {
+	width:70%;
+	float:right;
+	margin-top:2%;
+	display:inline-flex;
+}
+
+.navbarElement {
+	color: darkgreen;
+	font-weight: bold;
+	font-size: 1.2rem;
+	font-style: italic;
+	text-align: center;
+	width:15%;
+	cursor:pointer;
+	padding:1%;
+	margin-right:2%;
+	border-left: solid 5px white;
+	border-bottom: solid 5px white;
+	border-bottom-left-radius: 20px;
+	border-top-right-radius: 20px;
+	word-wrap: break-word;
+}
+
+.navbarElementNotSelected {
+	background:orange;
+}
+
+.navbarElement:hover,
+.navbarElementSelected {
+	background:lightgreen !important;
+	color:darkgreen;
+	font-weight: bold;
+}
+
+.caret {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: 2px;
+	vertical-align: middle;
+	border-top: 5px solid;
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+}
+
+.dropdownMenu {
+	display: none;
+	width:25%;
+	position: absolute;
+	margin-top:1%;
+	margin-left:-1%;
+}
+
+.dropdownMenuVisible {
+	width:25%;
+	position: absolute;
+	margin-top:1%;
+	margin-left:-1%;
+	z-index: 999999;
+}
+
+.dropdownMenu>div,
+.dropdownMenuVisible>div {
+	color: darkgreen;
+	background:orange;
+	font-weight: bold;
+	font-size: 1.2rem;
+	font-style: italic;
+	text-align: center;
+	cursor:pointer;
+	padding:3%;
+	border-left: solid 5px white;
+	border-bottom: solid 5px white;
+	border-bottom-left-radius: 20px;
+	border-top-right-radius: 20px;
+	word-wrap: break-word;
+	box-shadow: 10px 10px 20px darkgreen;
+}
+
+.dropdownMenu>div:hover,
+.dropdownMenuVisible>div:hover {
+	background:lightgreen !important;
+	color:darkgreen;
+	font-weight: bold;
+}
+
+/*.leaf {
+	color: white;
+	font-size: 1.1rem;
+	text-align: center;
+	padding-top: 12%;
+	width:20%;
+	height: 170px;
+	background:url(../img/leaf.png) no-repeat center center;
+	background-size: 100% auto;
+	cursor:pointer;
+}
+
+@-webkit-keyframes shake {
+	0% { -webkit-transform: rotate(0deg); }
+	9% { -webkit-transform: rotate(1deg); }
+	18% { -webkit-transform: rotate(2deg); }
+	27% { -webkit-transform: rotate(3deg); }
+	36% { -webkit-transform: rotate(2deg); }
+	45% { -webkit-transform: rotate(1deg); }
+	54% { -webkit-transform: rotate(0deg); }
+	63% { -webkit-transform: rotate(-1deg); }
+	72% { -webkit-transform: rotate(-2deg); }
+	81% { -webkit-transform: rotate(-3deg); }
+	90% { -webkit-transform: rotate(-2deg); }
+	100% { -webkit-transform: rotate(-1deg); }
+}
+.leaf:hover,
+.leaf:focus {
+	-webkit-animation-name: shake;
+	-webkit-animation-duration: 1.5s;
+	-webkit-transform-origin:100% 30%;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}*/
+
+.mainContainer {
+	width: 70%;
+	margin-left: 15%;
+}
+
+.homePageTextContainer {
+	color:darkgreen;
+	font-style: italic;
+	font-size: 1.5rem;
+	text-align: justify;
+	line-height: 200%;
+	margin-top:6%;
+	margin-bottom:6%;
+	margin-left: 24%;
+	margin-right: -9%;
+}
+
+.author {
+	text-align: right;
+}
+
+footer {
+	width:100%;
+	height:100px;
+	color:white;
+	background-color: green;
+}
+
+footer>div {
+	padding:2%;
+}
+
+#map-canvas {
+	width: 70%;
+	height: 600px;
+	margin-top: 80px;
+	margin-bottom: 80px;
+	margin-left: 14%;
+	background: #CCCCCC; 
+	border: solid 5px orange;
+	box-shadow: 15px 15px 20px darkgreen;
+}
+
+.logoLocationPage {
+	position: absolute;
+	width: 10%;
+	top:1%;
+	left:10%;
+	box-shadow: 15px 15px 10px black;
+	cursor: pointer;
+}
+
+.logoLocationPage:hover {
+	box-shadow: 15px 15px 10px white;
+}

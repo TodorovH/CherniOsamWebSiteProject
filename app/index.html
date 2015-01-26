@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cherni Osam</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<script src="lib/angular/angular.js"></script>
+</head>
+
+<body ng-app='CherniOsamApp' ng-controller="MainController" ng-cloak onload="location.href = '#/';">
+
+<header>
+	<div ng-class='navbar'>
+		<div ng-class="{'navbarElement navbarElementNotSelected': isClickedDropdownMenu1 == false, 'navbarElement navbarElementSelected': isClickedDropdownMenu1 == true}" ng-mouseenter="isClickedDropdownMenu1 = true" ng-mouseleave="isClickedDropdownMenu1 = false">
+			За селото
+			<strong ng-class='caret'></strong>
+			<div ng-class="{'dropdownMenu': isClickedDropdownMenu1 == false, 'dropdownMenuVisible': isClickedDropdownMenu1 == true}">
+				<div onclick='location.href ="#/location"; initialize()'>Местоположение</div>
+				<div>История</div>
+				<div>Махали</div>
+				<div>Родове и фамилии</div>
+				<div>Култура и бит</div>
+				<div>Образование</div>
+			</div>
+		</div>
+		<div ng-class="{'navbarElement navbarElementNotSelected': isClickedDropdownMenu == false, 'navbarElement navbarElementSelected': isClickedDropdownMenu == true}">
+			Фотоархив
+			<strong ng-class='caret'></strong>
+		</div>
+		<div ng-class="{'navbarElement navbarElementNotSelected': isClickedDropdownMenu == false, 'navbarElement navbarElementSelected': isClickedDropdownMenu == true}">
+			Митове и легенди
+			<strong ng-class='caret'></strong>
+		</div>
+		<div ng-class="{'navbarElement navbarElementNotSelected': isClickedDropdownMenu == false, 'navbarElement navbarElementSelected': isClickedDropdownMenu == true}">
+			Туризъм
+			<strong ng-class='caret'></strong>
+		</div>
+		<div ng-class="{'navbarElement navbarElementNotSelected': isClickedDropdownMenu == false, 'navbarElement navbarElementSelected': isClickedDropdownMenu == true}">Новини</div>
+	</div>
+</header>
+<div ng-view ng-class='mainContainer'>
+	
+</div>
+<footer>
+	<div>
+		© 2015  - Hristo Todorov. All Rights Reserved.
+	</div>
+</footer>
+
+<script src="lib/angular/angular-route.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers/MainController.js"></script>
+<script src="js/controllers/LocationController.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+      function initialize() {
+      	var myLatLng = new google.maps.LatLng(42.846, 24.77095);
+        var mapCanvas = document.getElementById('map-canvas');
+        var mapOptions = {
+          center: myLatLng,
+          zoom: 10,
+          mapTypeId: google.maps.MapTypeId.HYBRID
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+
+        var image = {
+        	url: 'img/flag.png',
+        	size: new google.maps.Size(71, 71),
+        	origin: new google.maps.Point(0, 0),
+			anchor: new google.maps.Point(12, 40),
+			scaledSize: new google.maps.Size(25, 42)
+        };
+		var marker = new google.maps.Marker({
+		  position: myLatLng,
+		  map: map,
+		  icon: image,
+		  draggable: true
+	  	});
+  	}
+      //google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</body>
+</html>
